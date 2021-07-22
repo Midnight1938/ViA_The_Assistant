@@ -12,7 +12,7 @@ session_prompt = "This is ViA, your personal Assistant here to help you at every
 question = "What are the sustainable development goals?"
 
 
-def Ask(question, chat_log=None):
+def Asker(question, chat_log=None):
     prompt_text = f"{chat_log}{restart_sequence}: {question}{start_sequence}:"
     response = openai.Completion.create(
         engine="davinci",
@@ -26,6 +26,8 @@ def Ask(question, chat_log=None):
     story = response['choices'][0]['text']
     return str(story)
 
+def Ask(Asked):
+    Asker(Asked, chat_log=None)
 
 def append_interaction_to_chat_log(question, answer, chat_log=None):
     if chat_log is None:
