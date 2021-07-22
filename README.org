@@ -2,8 +2,8 @@
 #+author: Skshm
 
 ** A Chatbot/Assistant that has the ability to help you with the followinng:
-    + [ ] Have Simple Covnersastions
-    + [ ] Bring you search results
+    + [x] Have Simple Covnersastions
+    + [x] Bring you search results
     + [ ] Solve Math equations
 
 ** Future Procpects:
