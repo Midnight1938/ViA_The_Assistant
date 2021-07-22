@@ -4,11 +4,12 @@
 ** A Chatbot/Assistant that has the ability to help you with the followinng:
     + [x] Have Simple Covnersastions
     + [x] Bring you search results
-    + [ ] Solve Math equations
+    + [x] Solve Math equations
+    + [ ] [[https://www.responsivemiracle.com/chitchat-premium-responsive-chat-and-discussion-html5-template/][Probably Impossible GUI]]
 
 ** Future Procpects:
+    + [x] Ability to add Modules
     + [ ] Voice input
-    + [ ] Ability to add Modules
     + [ ] Programming Answers with Github CoPilot
     + [ ] Reminders
     + [ ] Complex Math equations
