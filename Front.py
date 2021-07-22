@@ -1,5 +1,5 @@
 from Backend.My_First_CB import Ask
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from Backend.My_First_CB import Ask as BotAsk
 
 app = Flask(__name__)
@@ -8,13 +8,14 @@ app = Flask(__name__)
 #trainer = ChatterBotCorpusTrainer(englishBot)
 #trainer.train("chatterbot.corpus.english") #train the chatter bot for english
 #define app routes
-@app.route("/")
+@app.route('/', methods=["GET", "POST"])
 def index():
-    return render_template("index.html")
-@app.route("/get")
-#function for the bot response
-def get_bot_response():
-    userText = request.args.get('msg')
-    return str(BotAsk(userText))
-if __name__ == "__main__":
-    app.run(debug=True)
+    return render_template('index.html', **locals())@app.route('/chatbot', methods=["GET", "POST"])
+def chatbotResponse():
+    if request.method == 'POST':
+        the_question = request.form['question']
+        response = BotAsk(the_question)
+        return jsonify({"response": response })
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port='8888', debug=True)
