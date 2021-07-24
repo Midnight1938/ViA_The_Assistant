@@ -2,7 +2,7 @@ import os
 import openai
 
 openai.organization = "org-3fzd1diTNiEXq31xdIG8dViM"
-openai.api_key = "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"
+openai.api_key = ""
 completion = openai.Completion()
 
 name = "Human"
@@ -25,7 +25,7 @@ def Asker(question, chat_log=None):
         presence_penalty=0.3,
         stop=["\n"], )
     story = response['choices'][0]['text']
-    print(f"{name}: {question}\n Via: str({story})")
+    return(f"{story}")
 
 def Ask(Asked):
     Asker(Asked, chat_log=None)
