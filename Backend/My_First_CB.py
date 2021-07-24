@@ -6,6 +6,7 @@ openai.api_key = "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"
 completion = openai.Completion()
 
 name = "Human"
+BotName = "ViA"
 start_sequence = "\nViA:"
 restart_sequence = f"\n{name} "
 session_prompt = "This is ViA, your personal Assistant here to help you at every step"
