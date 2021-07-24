@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "/home/skshm/miniconda3/envs/WebDev/bin/python"
+    "python.pythonPath": "/home/skshm/miniconda3/envs/WebDev/bin/python",
+    "python.formatting.provider": "black"
 }
