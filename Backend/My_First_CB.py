@@ -27,6 +27,8 @@ def Asker(question, chat_log=None):
     print(f"{name}: {question}\n Via: str({story})")
 
 def Ask(Asked):
+    # default return statement for bot
+    return "This is me"
     Asker(Asked, chat_log=None)
 
 def append_interaction_to_chat_log(question, answer, chat_log=None):
