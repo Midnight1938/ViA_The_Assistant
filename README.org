@@ -1,7 +1,7 @@
 #+title: ViA your Virtual Assistant
 #+author: Skshm
 
-[[file:Icons/robot.png][ViA]]
+[[file:Icons/robot.png]]
 
 ** A Chatbot/Assistant built with GPT3 that has the ability to help you with the followinng:
     + Have Simple Covnersastions
