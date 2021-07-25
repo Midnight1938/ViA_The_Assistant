@@ -8,8 +8,8 @@ Text_Colour = "#EAECEE"
 Mssg_colour = "#2C3E50"
 Bttn_Colour = "#808dd3"
 
-Font = "FiraCodeRegular 14"
-Font_Bold = "FiraCodeBold 13"
+Font = "Courier 13"
+Font_Bold = "Helvetica 11 bold"
 
 class ViA_GUI():
     def __init__(self):
@@ -24,7 +24,7 @@ class ViA_GUI():
     def _setup_main_window(self):
         self.window.title("ViA Assistant")
         self.window.resizable(width=False, height=False)
-        self.window.configure(width=470, height=550, bg=BG_Colour)
+        self.window.configure(width=480, height=550, bg=BG_Colour)
 
 
         ##! Head Area
@@ -38,13 +38,13 @@ class ViA_GUI():
         
         ##!Text Body
         self.textWidget = Text(self.window, width=20, height=2, bg=BG_Colour, fg=Text_Colour,
-                            font=Font, padx=2, pady=2)
+                            font=Font, padx=2, pady=2, wrap=WORD)
         self.textWidget.place(relheight=0.744, relwidth=1, rely=0.08)
         self.textWidget.configure(cursor="arrow", state=DISABLED)
         
         ##!Scroll-Bar
         scrllbar = Scrollbar(self.textWidget)
-        scrllbar.place(relheight=1, relx=0.972)
+        scrllbar.place(relheight=1, relx=0.999)
         scrllbar.configure(command=self.textWidget.yview)
         
         ##! Sender BG
@@ -72,12 +72,12 @@ class ViA_GUI():
         if not msg:
             return
         self.mssgEntry.delete(0,END)
-        msg1 = f"{sender}: {msg}\n\n"                                                          ##! Probably best place to enter ViA Interaction text
+        msg1 = f"{sender}: {msg}\n\n"
         self.textWidget.configure(cursor="arrow", state=NORMAL)
         self.textWidget.insert(END, msg1)
         self.textWidget.configure(cursor="arrow", state=DISABLED)
         
-        msg2 = f"{ViASide.BotName}: {ViASide.Ask(msg1)}\n\n"
+        msg2 = f"{ViASide.BotName}: {ViASide.Ask(msg1)}\n\n"                            ##! ViA Interaction text
         self.textWidget.configure(cursor="arrow", state=NORMAL)
         self.textWidget.insert(END, msg2)
         self.textWidget.configure(cursor="arrow", state=DISABLED)
