@@ -1,8 +1,16 @@
 import os
 import openai
+from cryptography.fernet import Fernet
+
+def Xscvi():
+    f = Fernet('A8Xp4zXtJyaq1cmNuM69Uj4wTjnSRmo9A_LYjVIFbNs=')
+    encrypt = b'gAAAAABg_pW2FkZcavkwc-VbRQ0racr53gYZaA8Ka3KI4lfJbRlR6cU87i0UNoXrMRz648HS1YmnJzAMaU2X0feyybGsEwieI-osAmKgLlKK436mcS2LgXttdUVLUJWNn3-L3Urmpv4MFiHPB9P3ph0a5j_DW1yI6g=='
+
+    decrypted_data = f.decrypt(encrypt)
+    return decrypted_data.decode()
 
 openai.organization = "org-3fzd1diTNiEXq31xdIG8dViM"
-openai.api_key = "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"
+openai.api_key = Xscvi()
 completion = openai.Completion()
 
 
