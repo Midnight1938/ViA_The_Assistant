@@ -1,18 +1,19 @@
 #+title: ViA your Virtual Assistant
 #+author: Skshm
 
-** A Chatbot/Assistant that has the ability to help you with the followinng:
-    + [x] Have Simple Covnersastions
-    + [x] Bring you search results
-    + [x] Solve Math equations
-    + [ ] [[https://www.responsivemiracle.com/chitchat-premium-responsive-chat-and-discussion-html5-template/][Probably Impossible GUI]]
+[[file:Icons/robot.png]]
+
+** A Chatbot/Assistant built with GPT3 that has the ability to help you with the followinng:
+    + Have Simple Covnersastions
+    + Bring you search results
+    + Solve Math equations
+    + GUI and WebApp implementations
+    And Much More
 
 ** Future Procpects:
     + [x] Ability to add Modules
     + [ ] Voice input
     + [ ] Programming Answers with Github CoPilot
-    + [ ] Reminders
-    + [ ] Complex Math equations
     + [ ] PopUps
     + [ ] Mascot
     + [ ] Audio Recording
