@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "/home/skshm/miniconda3/envs/WebDev/bin/python",
+    "appService.defaultWebAppToDeploy": "/subscriptions/e0b6b988-398e-4f1b-955e-fbdc5035164d/resourceGroups/GPT3-ChatBot/providers/Microsoft.Web/sites/ViA-Assistant",
+    "appService.deploySubpath": "."
+}
