@@ -1,7 +1,7 @@
 :root {
   --body-bg: linear-gradient(135deg, #272557 0%, #a79cbe 100%);
-  --msger-bg: #fff;
-  --border: 2px solid #ddd;
+  --msger-bg: #f3d0cd;
+  --border: 2px solid #f3d0cd;
   --left-msg-bg: #7b4662;
   --right-msg-bg: #445080;
 }
