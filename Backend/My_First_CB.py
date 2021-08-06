@@ -2,6 +2,7 @@ import os
 import openai
 from cryptography.fernet import Fernet
 
+
 def Xscvi():
     f = Fernet('A8Xp4zXtJyaq1cmNuM69Uj4wTjnSRmo9A_LYjVIFbNs=')
     encrypt = b'gAAAAABg_pW2FkZcavkwc-VbRQ0racr53gYZaA8Ka3KI4lfJbRlR6cU87i0UNoXrMRz648HS1YmnJzAMaU2X0feyybGsEwieI-osAmKgLlKK436mcS2LgXttdUVLUJWNn3-L3Urmpv4MFiHPB9P3ph0a5j_DW1yI6g=='
@@ -9,10 +10,10 @@ def Xscvi():
     decrypted_data = f.decrypt(encrypt)
     return decrypted_data.decode()
 
+
 openai.organization = "org-3fzd1diTNiEXq31xdIG8dViM"
 openai.api_key = Xscvi()
 completion = openai.Completion()
-
 
 name = "Human"
 BotName = "ViA"
@@ -33,18 +34,18 @@ def Asker(question, chat_log=None):
     prompt_text = f"{chat_log}{restart_sequence}: {question}{start_sequence}:"
     try:
         response = openai.Completion.create(
-        engine="davinci",
-        prompt=prompt_text,
-        temperature=0.3,
-        max_tokens=150,
-        top_p=1,
-        frequency_penalty=0,
-        presence_penalty=0.1,
-        stop=["\n"],
-    )
+            engine="davinci",
+            prompt=prompt_text,
+            temperature=0.3,
+            max_tokens=150,
+            top_p=1,
+            frequency_penalty=0,
+            presence_penalty=0.1,
+            stop=["\n"],
+        )
         story = response["choices"][0]["text"]
     except:
-        story = "Error Occured, Contact Maker" 
+        story = "Error Occured, Contact Maker"
     return story
 
 
